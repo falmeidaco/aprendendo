@@ -1,1 +1,217 @@
-/* Folha de estilo do site */
+/* Estilização geral da página: fontes, tamanho, cores */
+body, html {
+    font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+    font-family: 14px;
+    position: relative;
+    background-color: gray;
+    color: #333;
+}
+/* Layout da página - Cabeçalho */
+.page-header {
+    height: 130px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #f1f1f1;
+    box-shadow: 0 1px 5px #000;
+    z-index: 9999;
+}
+    /* Conteúdo do cabeçalho */
+    .header-content {
+        height: 80px;
+    }
+        .header-content .header-title {
+            font-family: 'Roboto Slab', serif;
+            text-transform: uppercase;
+            color: gray;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            padding:0.3em 0 0.1em;
+        }
+        .header-content .header-description {
+            color: gray;
+            text-align: center;
+            padding: 0.4em;
+        }
+    /* Navegação */
+    .header-navigation {
+        background-color: white;
+        height: 50px;
+    }
+        .header-navigation ul li {
+            display: inline-block;
+            float: left;
+        }
+            .header-navigation ul li a {
+                display: block;
+                text-decoration: none;
+                padding: 15px;
+                color: gray;
+                border-bottom:4px solid red;
+            }
+            .header-navigation ul li a.active {
+                color: red;
+            }
+/* Rodapé da página */
+.page-footer {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+    box-shadow: 0 1px 5px #000;
+}
+    /* Ação para retornar ao topo */
+    .page-footer .action-side {
+        float: left;
+        margin: 15px;
+
+    }
+        .page-footer .action-side a {
+            display: block;
+            text-decoration: none;
+            color: red;
+            font-size: 0.9em;
+        }
+    /* Informações de autoria */
+    .page-footer .content-side {
+        float: right;
+        width: 80%;
+        font-size: 0.7em;
+        padding: 10px;
+    }
+
+/* Conteudo da página */
+.page-content {
+    margin: 130px 15px 70px 15px;
+    padding-top: 15px;
+    position: relative;
+}
+    /* Navegação do conteúdo */
+    .page-content .nav-side {
+        float:left;
+        width: 20%;
+    }
+        .nav-side .nav-content {
+            background-color: white;
+            margin-right: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+            .nav-side .page-info {
+                background-color: red;
+                color: white;
+            }
+                .nav-side .page-info .page-title {
+                    font-family: 'Roboto Slab', serif;
+                    font-size: 2em;
+                    padding: 15px;
+                }
+                .nav-side .page-info .page-description {
+                    padding: 0 15px 15px;
+                    font-size: 0.8em;
+                    line-height: 1.4em;
+                }
+        .nav-side nav {
+            padding-bottom: 15px;
+        }
+            /* Navegação Vertical */
+            .nav-side nav ul li a {
+                font-family: 'Roboto Slab', serif;
+                display: block;
+                padding: 10px 15px;
+                text-decoration: none;
+                color: gray;
+                font-weight: bold;
+                color: red;
+                font-size: 0.9em;
+            }
+                /* Subnavegação */
+                .nav-side nav ul li ul a {
+                    font-family: 'Montserrat', sans-serif;
+                    color: gray;
+                    font-weight: normal;
+                    padding: 5px 15px 5px 25px;
+                    font-size: 0.8em;
+                }
+    /* Conteúdo principal */
+    .page-content .content-side {
+        background-color: white;
+        float:right;
+        width: 80%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+/* Estilização de conteúdo */
+article .article-header {
+    border-left: 5px solid red;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+article .article-title {
+    font-family: 'Roboto Slab', serif;
+    color: red;
+    font-size: 2.5em;
+    margin: 0 0 0.2em;
+}
+article .article-description {
+    line-height: 1.4em;
+}
+article .article-text {
+    padding: 20px;
+}
+article .article-text h1,
+article .article-text h2,
+article .article-text h3,
+article .article-text h4,
+article .article-text h5,
+article .article-text h6 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    margin: 15px 0;
+}
+article .article-text h1 {
+    font-size: 1.6em;
+    color: black;
+}
+article .article-text h2 {
+    font-size: 1.4em;
+}
+article .article-text p {
+    line-height: 1.6em;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+hr {
+    height: 1px;
+    border: none;
+    border-bottom: 1px dotted #999;
+}
+.media-img {
+    border: 1px solid gray;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+.media-img p {
+    font-size: 0.8em;
+    color: gray;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+.media-left {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+.media-right {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+/* Outros */
+
+/* Técnica para ajustar a altura quando os elementos internos utilizam propriedados 'float' */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+}
